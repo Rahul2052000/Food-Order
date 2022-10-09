@@ -13,7 +13,8 @@ export const AvailableMeals = () => {
   useEffect(() => {
          const fetchMeals = async () => {
           setIsLoading(true);
-          const response = await fetch('https://test-1fe01-default-rtdb.firebaseio.com//meals.json');
+          const response = await fetch('https://deploy-eb17c-default-rtdb.firebaseio.com/meals.json');
+          console.log(response);
           if(!response.ok){
             throw new Error('Something went wrong!');
           }
